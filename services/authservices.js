@@ -54,7 +54,7 @@ exports.loginuser = async (req, res) => {
    }).select({ username: 1, email: 1, password: 1, phonenumber: 1});
    if (!users)
       return res.status(500).send({
-         status:500,
+         status:500, 
          payload: users,
          message: "User not found",
          error: "email or password moght be worng"

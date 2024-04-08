@@ -8,6 +8,7 @@ const mroute = require("./route/mroute")
 const userroute = require("./route/userroute")
 const review = require("./route/reviewroute")
 const book = require("./route/bookroute")
+const pack = require("./route/packageroute")
 
 const app = express()
 app.use(cros())
@@ -20,6 +21,7 @@ app.use(mroute)
 app.use("/get",userroute)
 app.use(review)
 app.use(book)
+app.use("/packages",pack)
 
  
 // app.get("/get",(req,res)=>{

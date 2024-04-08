@@ -18,6 +18,11 @@ const userschema = new mongodb.Schema({
     }
 })
 
+
+
 const user = mongodb.model("users", userschema)
 module.exports=user
+
+
+
 

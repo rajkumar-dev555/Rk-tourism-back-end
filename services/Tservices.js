@@ -25,8 +25,23 @@ module.exports.travelpackage = async (req, res) =>{
 
 }
 
-exports.getAllTpackage = async (req, res) => {
+module.exports.getAllTpackage = async (req, res) => {
     let result = await  travel.find()
     res.send(result)
+
 }
+
+
+module.exports.GetTpackageone = async (req, res) => {
+     const result = await travel.find({packagename:req.params.packagename})
+     res.send(result)
+}
+
+
+module.exports.PackPlace = async (req, res) => {
+    const result = await travel.find({placename: req.params.placename})
+    res.send(result)
+}
+ 
+
 

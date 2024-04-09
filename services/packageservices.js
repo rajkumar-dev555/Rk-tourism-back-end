@@ -22,6 +22,11 @@ module.exports.packageGetID = async (req,res) =>{
 }
 
 
+module.exports.GetPackname = async (req, res) => {
+    const result = await package.find({packagename:req.params.packagename})
+    res.send(result)
+
+} 
 
 
 module.exports.sample = (req,res)=>{
